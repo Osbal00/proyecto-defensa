@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basta Ya - Endless Runner</title>
+    <style>
+        :root {
+            --rojo-bolivia: #D52B1E;
+            --amarillo-bolivia: #F9E000;
+            --verde-bolivia: #007934;
+            --fondo-oscuro: #121212;
+            --texto-claro: #f4f4f4;
+        }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--fondo-oscuro); color: var(--texto-claro); }
+        
+        /* 1. Encabezado de Navegación */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(0,0,0,0.9); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; box-sizing: border-box; border-bottom: 3px solid var(--rojo-bolivia); }
+        .logo { font-size: 24px; font-weight: bold; color: var(--amarillo-bolivia); text-transform: uppercase; }
+        .menu a { color: white; text-decoration: none; margin: 0 15px; font-weight: 600; transition: color 0.3s; }
+        .menu a:hover { color: var(--amarillo-bolivia); }
+        
+        /* Contenedores de Sección */
+        section { padding: 100px 10%; min-height: 50vh; border-bottom: 1px solid #333; }
+        h2 { font-size: 36px; color: var(--amarillo-bolivia); margin-bottom: 20px; border-left: 5px solid var(--verde-bolivia); padding-left: 15px; }
+        
+        /* 2. Sección Principal */
+        #inicio { text-align: center; padding-top: 150px; background: linear-gradient(rgba(18,18,18,0.7), rgba(18,18,18,1)), url('img/fondo_ciudad.jpg') center/cover; }
+        .etiqueta { background-color: var(--rojo-bolivia); padding: 5px 15px; border-radius: 20px; font-size: 14px; font-weight: bold; letter-spacing: 2px; }
+        .titulo-juego { font-size: 64px; margin: 20px 0; color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+        .sintesis { font-size: 20px; max-width: 800px; margin: 0 auto 40px auto; color: #ccc; }
+        .botones { display: flex; justify-content: center; gap: 20px; margin-bottom: 50px; }
+        .btn-principal { background-color: var(--verde-bolivia); color: white; padding: 15px 40px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; transition: transform 0.2s; }
+        .btn-principal:hover { transform: scale(1.05); }
+        .btn-secundario { background-color: transparent; color: white; border: 2px solid white; padding: 15px 40px; font-size: 18px; font-weight: bold; text-decoration: none; border-radius: 5px; }
+        
+        /* Tarjetas de Datos e Infografía */
+        .grid-datos { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+        .tarjeta { background: #222; padding: 25px; border-radius: 10px; text-align: center; border-top: 4px solid var(--amarillo-bolivia); }
+        .tarjeta h3 { margin: 0 0 10px 0; color: #888; font-size: 16px; }
+        .tarjeta .dato { font-size: 32px; font-weight: bold; color: white; }
+
+        /* Contenedor del Juego */
+        .contenedor-unity { width: 100%; max-width: 960px; margin: 0 auto; background: #000; border: 2px solid #444; border-radius: 10px; overflow: hidden; aspect-ratio: 16/9; }
+        iframe { width: 100%; height: 100%; border: none; }
+        
+        /* Gráficos */
+        .imagen-promo { width: 100%; max-width: 600px; border-radius: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Encabezado de Navegación -->
+    <nav>
+        <div class="logo">Basta Ya</div>
+        <div class="menu">
+            <!-- Menú de enlaces internos -->
+            <a href="#historia">Historia</a>
+            <a href="#personaje">Personaje</a>
+            <a href="#mecanicas">Mecánicas</a>
+            <a href="#datos">Datos</a>
+            <a href="#jugar">Jugar ahora</a>
+        </div>
+    </nav>
+
+    <!-- 2. Sección Principal -->
+    <section id="inicio">
+        <!-- Clasificación técnica -->
+        <span class="etiqueta">ENDLESS RUNNER 3D</span>
+        <h1 class="titulo-juego">CARRERA PRESIDENCIAL</h1>
+        
+        <!-- Síntesis conceptual -->
+        <p class="sintesis">Esquiva obstáculos, evade las marchas y acumula los votos necesarios para la victoria en las calles de Bolivia.</p>
+        
+        <!-- Llamados a la acción -->
+        <div class="botones">
+            <a href="#jugar" class="btn-principal">JUGAR AHORA</a>
+            <a href="#historia" class="btn-secundario">DESCUBRIR HISTORIA</a>
+        </div>
+
+        <!-- Panel de métricas rápidas -->
+        <div class="grid-datos" style="max-width: 800px; margin: 0 auto;">
+            <div class="tarjeta"><h3>Meta</h3><div class="dato">500 Votos</div></div>
+            <div class="tarjeta"><h3>Vidas</h3><div class="dato">3</div></div>
+            <div class="tarjeta"><h3>Controles</h3><div class="dato">Teclas de Dirección</div></div>
+        </div>
+
+        <!-- AQUÍ PUEDES PONER TU IMAGEN PRINCIPAL (Logo o Arte) -->
+        <!-- <img src="img/arte_principal.png" alt="Arte Promocional" class="imagen-promo"> -->
+    </section>
+
+    <!-- 3. Historia -->
+    <section id="historia">
+        <h2>El Conflicto Central</h2>
+        <p>En medio de la agitación social y las calles bloqueadas, la carrera por la presidencia no se detiene. El entorno virtual representa las icónicas calles y cerros bolivianos, donde cada paso hacia adelante es un voto ganado. El objetivo narrativo del personaje es superar las barreras impuestas por la conflictividad, demostrando agilidad y resistencia para alcanzar el apoyo del pueblo antes de que los obstáculos acaben con su campaña.</p>
+    </section>
+
+    <!-- 4. Personaje principal -->
+    <section id="personaje">
+        <h2>Rodrigo Paz</h2>
+        <p>El candidato y protagonista. Equipado con determinación y su icónica vestimenta, Rodrigo debe recorrer un entorno infinito generado procedimentalmente. Destaca por su habilidad atlética para evadir rápidamente proyectiles y barricadas. Su rol es representar la perseverancia frente a la adversidad.</p>
+        <!-- AQUÍ PUEDES PONER EL RENDER O FOTO DE RODRIGO PAZ -->
+        <img src="img/rodrigo_render.jpg" alt="Render de Rodrigo Paz" class="imagen-promo">
+    </section>
+
+    <!-- 5. Mecánicas de juego y controles -->
+    <section id="mecanicas">
+        <h2>Mecánicas y Reglas del Sistema</h2>
+        <p>El juego exige reflejos inmediatos ante un sistema de generación procedural de peligros.</p>
+        <ul>
+            <li><strong>Saltar (Flecha Arriba):</strong> Evade obstáculos terrestres como llantas en llamas, basureros y barreras bajas.</li>
+            <li><strong>Agacharse (Flecha Abajo):</strong> Deslízate bajo pasacalles y esquiva petardos aéreos.</li>
+            <li><strong>Peligros Ambientales:</strong> El gas lacrimógeno no resta vidas, pero marea la cámara dificultando la visibilidad del entorno.</li>
+            <li><strong>Condición de Victoria:</strong> Sobrevivir y acumular la cantidad de votos requerida.</li>
+            <li><strong>Condición de Derrota:</strong> Perder los 3 fueros (vidas) al impactar contra objetos sólidos.</li>
+        </ul>
+    </section>
+
+    <!-- 6. Datos e infografía -->
+    <section id="datos">
+        <h2>Indicadores de Rendimiento</h2>
+        <div class="grid-datos">
+            <div class="tarjeta"><h3>Generación</h3><div class="dato">Procedural</div></div>
+            <div class="tarjeta"><h3>Velocidad Máxima</h3><div class="dato">24 m/s</div></div>
+            <div class="tarjeta"><h3>Obstáculos</h3><div class="dato">3 Tipos</div></div>
+            <div class="tarjeta"><h3>Animaciones</h3><div class="dato">Captura de Movimiento</div></div>
+        </div>
+    </section>
+
+    <!-- 7. Despliegue y ejecución ("Jugar ahora") -->
+    <section id="jugar">
+        <h2>Jugar Ahora</h2>
+        <p>Requiere un navegador moderno de escritorio (Chrome, Firefox, Edge) con aceleración por hardware activada. Haz clic en el juego para enfocar los controles.</p>
+        
+        <div class="contenedor-unity">
+            <!-- Contenedor incrustado para la ejecución de la compilación en Unity -->
+            <!-- Aquí el iframe invoca tu exportación WebGL desde la carpeta local 'juego' -->
+            <iframe src="juego/index.html" title="Ejecución de la build en Unity WebGL"></iframe>
+        </div>
+    </section>
+
+</body>
+</html>
