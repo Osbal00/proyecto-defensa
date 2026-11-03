@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basta Ya - Endless Runner</title>
+    <title>Basta Ya</title>
     <style>
         :root {
             --rojo-bolivia: #D52B1E;
@@ -63,47 +63,40 @@
         </div>
     </nav>
 
-    <!-- 2. Sección Principal -->
     <section id="inicio">
-        <!-- Clasificación técnica -->
+        
         <span class="etiqueta">ENDLESS RUNNER 3D</span>
         <h1 class="titulo-juego">CARRERA PRESIDENCIAL</h1>
         
-        <!-- Síntesis conceptual -->
+        
         <p class="sintesis">Esquiva obstáculos, evade las marchas y acumula los votos necesarios para la victoria en las calles de Bolivia.</p>
         
-        <!-- Llamados a la acción -->
         <div class="botones">
             <a href="#jugar" class="btn-principal">JUGAR AHORA</a>
             <a href="#historia" class="btn-secundario">DESCUBRIR HISTORIA</a>
         </div>
 
-        <!-- Panel de métricas rápidas -->
         <div class="grid-datos" style="max-width: 800px; margin: 0 auto;">
             <div class="tarjeta"><h3>Meta</h3><div class="dato">500 Votos</div></div>
             <div class="tarjeta"><h3>Vidas</h3><div class="dato">3</div></div>
             <div class="tarjeta"><h3>Controles</h3><div class="dato">Teclas de Dirección</div></div>
         </div>
 
-        <!-- AQUÍ PUEDES PONER TU IMAGEN PRINCIPAL (Logo o Arte) -->
         <!-- <img src="img/arte_principal.png" alt="Arte Promocional" class="imagen-promo"> -->
     </section>
 
-    <!-- 3. Historia -->
     <section id="historia">
         <h2>El Conflicto Central</h2>
         <p>En medio de la agitación social y las calles bloqueadas, la carrera por la presidencia no se detiene. El entorno virtual representa las icónicas calles y cerros bolivianos, donde cada paso hacia adelante es un voto ganado. El objetivo narrativo del personaje es superar las barreras impuestas por la conflictividad, demostrando agilidad y resistencia para alcanzar el apoyo del pueblo antes de que los obstáculos acaben con su campaña.</p>
     </section>
 
-    <!-- 4. Personaje principal -->
     <section id="personaje">
         <h2>Rodrigo Paz</h2>
         <p>El candidato y protagonista. Equipado con determinación y su icónica vestimenta, Rodrigo debe recorrer un entorno infinito generado procedimentalmente. Destaca por su habilidad atlética para evadir rápidamente proyectiles y barricadas. Su rol es representar la perseverancia frente a la adversidad.</p>
-        <!-- AQUÍ PUEDES PONER EL RENDER O FOTO DE RODRIGO PAZ -->
+        
         <img src="img/rodrigo_render.jpg" alt="Render de Rodrigo Paz" class="imagen-promo">
     </section>
 
-    <!-- 5. Mecánicas de juego y controles -->
     <section id="mecanicas">
         <h2>Mecánicas y Reglas del Sistema</h2>
         <p>El juego exige reflejos inmediatos ante un sistema de generación procedural de peligros.</p>
@@ -116,7 +109,6 @@
         </ul>
     </section>
 
-    <!-- 6. Datos e infografía -->
     <section id="datos">
         <h2>Indicadores de Rendimiento</h2>
         <div class="grid-datos">
@@ -127,14 +119,12 @@
         </div>
     </section>
 
-    <!-- 7. Despliegue y ejecución ("Jugar ahora") -->
     <section id="jugar">
         <h2>Jugar Ahora</h2>
         <p>Requiere un navegador moderno de escritorio (Chrome, Firefox, Edge) con aceleración por hardware activada. Haz clic en el juego para enfocar los controles.</p>
         
         <div class="contenedor-unity">
-            <!-- Contenedor incrustado para la ejecución de la compilación en Unity -->
-            <!-- Aquí el iframe invoca tu exportación WebGL desde la carpeta local 'juego' -->
+            
             <iframe src="juego/index.html" title="Ejecución de la build en Unity WebGL"></iframe>
         </div>
     </section>
