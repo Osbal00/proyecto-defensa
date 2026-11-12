@@ -64,13 +64,15 @@
 
     <!-- Navegación -->
     <nav>
-        <div class="logo">Carrera Presidencial</div>
+        <div class="logo">Dev: Américo Ramírez - Portafolio</div>
         <div class="menu">
             <a href="#historia">Historia</a>
             <a href="#personaje">Personaje</a>
             <a href="#mecanicas">Mecánicas</a>
             <a href="#infografia">Datos del Sistema</a>
             <a href="#jugar">Jugar ahora</a>
+            <a href="#juego1">Juego 1: Carrera Presidencial</a>
+            <a href="#juego2">Juego 2: Pac-Man Labyrinth</a>
         </div>
     </nav>
 
@@ -170,14 +172,42 @@
     </section>
 
     <!-- Ejecución -->
-    <section id="jugar">
-        <h2>Ejecutar Compilación (WebGL)</h2>
-        <p>Requiere un navegador de escritorio (Chrome, Firefox, Edge) con aceleración por hardware. <strong>Haz clic dentro del cuadro negro para iniciar y activar los controles del teclado.</strong></p>
-        
+    <section id="juego1">
+        <h2>Juego 1: Rodrigo Paz contra el bloqueo</h2>
+        <!-- Botón START -->
+        <div style="text-align: center; margin-bottom: 10px;">
+            <button class="btn-principal" onclick="iniciarJuego1()">START JUEGO 1</button>
+        </div>
+    
         <div class="contenedor-unity">
-            <iframe src="juego/index.html" title="Ejecución de la build en Unity WebGL" scrolling="no" style="overflow: hidden;"></iframe>
+            <!-- El iframe inicia sin src (src="") -->
+            <iframe id="iframe-juego1" src="" title="Ejecución de la build en Unity WebGL" scrolling="no" style="overflow: hidden;"></iframe>
         </div>
     </section>
+    
+    <script>
+        function iniciarJuego1() {
+            document.getElementById('iframe-juego1').src = "juego/index.html";
+        }
+    </script>
+
+    <section id="juego2">
+        <h2>Juego 2: Laberinto Político 3D (Pac-Man)</h2>
+        <div style="text-align: center; margin-bottom: 10px;">
+            <button class="btn-principal" onclick="iniciarJuego2()">START JUEGO 2</button>
+        </div>
+    
+        <div class="contenedor-unity">
+            <iframe id="iframe-juego2" src="" title="Ejecución de Pac-Man" scrolling="no" style="overflow: hidden;"></iframe>
+        </div>
+    </section>
+    
+    <script>
+        function iniciarJuego2() {
+            // Asegúrate de crear una carpeta llamada "juego2" en tu repositorio para subir los archivos de este juego
+            document.getElementById('iframe-juego2').src = "juego2/index.html";
+        }
+    </script>
 
 </body>
 </html>
